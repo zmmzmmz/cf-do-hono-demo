@@ -2,7 +2,19 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "cf-do-hono-demo",
   "main": "src/index.ts",
-  "compatibility_date": "2025-07-01"
+  "compatibility_date": "2025-07-01",
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "DEVICE_MANAGER",
+        "class_name": "DeviceManager"
+      },
+      {
+        "name": "CONTROL_CENTER",
+        "class_name": "ControlCenter"
+      }
+    ]
+  }
   // "compatibility_flags": [
   //   "nodejs_compat"
   // ],

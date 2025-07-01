@@ -1,0 +1,14 @@
+{
+  "name": "device-client-test",
+  "version": "1.0.0",
+  "description": "设备客户端测试包",
+  "main": "device-client.js",
+  "dependencies": {
+    "ws": "^8.14.0"
+  },
+  "scripts": {
+    "start": "node device-client.js",
+    "test-sensor": "node device-client.js --id sensor-001 --name '温湿度传感器' --type sensor --capabilities temperature,humidity,status",
+    "test-actuator": "node device-client.js --id actuator-001 --name '智能开关' --type actuator --capabilities switch,dimmer,status"
+  }
+}

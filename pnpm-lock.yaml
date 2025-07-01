@@ -10,9 +10,15 @@ dependencies:
     version: 4.8.3
 
 devDependencies:
+  '@cloudflare/workers-types':
+    specifier: ^4.20241218.0
+    version: 4.20250701.0
   wrangler:
     specifier: ^4.4.0
-    version: 4.22.0
+    version: 4.22.0(@cloudflare/workers-types@4.20250701.0)
+  ws:
+    specifier: ^8.18.3
+    version: 8.18.3
 
 packages:
 
@@ -80,6 +86,10 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /@cloudflare/workers-types@4.20250701.0:
+    resolution: {integrity: sha512-q1bHwe5P7FGy9RkLYOY1kwoZrqUe2Q6XhCPscaxzQc0N7+2pwIZzZzY5iMTTfvmf65UNsadoVxuF+vPVXoAkkQ==}
+    dev: true
 
   /@cspotcode/source-map-support@0.8.1:
     resolution: {integrity: sha512-IchNf6dN4tHoMFIn/7OE8LWZ19Y6q/67Bmf6vnGREv8RSbBVb9LPJxEcnwrcwX6ixSvaiGoomAUvu4YSxXrVgw==}
@@ -805,7 +815,7 @@ packages:
       '@cloudflare/workerd-windows-64': 1.20250617.0
     dev: true
 
-  /wrangler@4.22.0:
+  /wrangler@4.22.0(@cloudflare/workers-types@4.20250701.0):
     resolution: {integrity: sha512-m8qVO3YxhUTII+4U889G/f5UuLSvMkUkCNatupV2f/SJ+iqaWtP1QbuQII8bs2J/O4rqxsz46Wu2S50u7tKB5Q==}
     engines: {node: '>=18.0.0'}
     hasBin: true
@@ -817,6 +827,7 @@ packages:
     dependencies:
       '@cloudflare/kv-asset-handler': 0.4.0
       '@cloudflare/unenv-preset': 2.3.3(unenv@2.0.0-rc.17)(workerd@1.20250617.0)
+      '@cloudflare/workers-types': 4.20250701.0
       blake3-wasm: 2.1.5
       esbuild: 0.25.4
       miniflare: 4.20250617.4
@@ -832,6 +843,19 @@ packages:
 
   /ws@8.18.0:
     resolution: {integrity: sha512-8VbfWfHLbbwu3+N6OKsOMpBdT4kXPDDB9cJk2bJ6mh9ucxdlnNvH1e+roYkKmN9Nxw2yjz7VzeO9oOz2zJ04Pw==}
+    engines: {node: '>=10.0.0'}
+    peerDependencies:
+      bufferutil: ^4.0.1
+      utf-8-validate: '>=5.0.2'
+    peerDependenciesMeta:
+      bufferutil:
+        optional: true
+      utf-8-validate:
+        optional: true
+    dev: true
+
+  /ws@8.18.3:
+    resolution: {integrity: sha512-PEIGCY5tSlUt50cqyMXfCzX+oOPqN0vuGqWzbcJ2xvnkzkq46oOpz7dQaTDBdfICb4N14+GARUDw2XV2N4tvzg==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
       bufferutil: ^4.0.1
