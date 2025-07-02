@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "Local Device",
+  "version": "0.0.1",
+  "description": "Local Device",
+  "action": {
+    "default_title": "GettaData - Get the data you need, when you need it."
+  },
+  "chrome_url_overrides": {},
+  "icons": {
+    "32": "logo-128-r-r.png",
+    "128": "logo-128-r-r.png"
+  },
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting",
+    "sidePanel",
+    "webRequest",
+    "webNavigation",
+    "alarms",
+    "cookies",
+    "contextMenus",
+    "idle",
+    "tabs"
+  ],
+  "host_permissions": ["<all_urls>"],
+  "web_accessible_resources": [
+    {
+      "matches": ["<all_urls>"],
+      "use_dynamic_url": false,
+      "resources": ["proxy.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "service-worker-loader.js",
+    "type": "module"
+  }
+}

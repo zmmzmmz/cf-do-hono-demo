@@ -14,7 +14,13 @@
         "class_name": "ControlCenter"
       }
     ]
-  }
+  },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_classes": ["DeviceManager", "ControlCenter"]
+    }
+  ]
   // "compatibility_flags": [
   //   "nodejs_compat"
   // ],
